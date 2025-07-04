@@ -1,0 +1,17 @@
+If you think you may have found a bug in JParse, please report it to the
+JParse maintainer.  The maintainer is currently:
+
+Jerry James <jamesj@acm.org>
+
+
+Known bugs in JParse:
+
+1) Syntax errors in a source file cause JParse to emit cryptic error
+   messages.
+
+2) Semantic errors in a source file cause JParse to crash with an
+   exception in some JParse class, or in some rare cases to appear to
+   proceed normally, but give incorrect results when queried for type or
+   exception information.
+
+When bugs #1-2 have been fixed, JParse 1.0 will be released.

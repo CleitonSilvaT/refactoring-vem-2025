@@ -1,0 +1,23 @@
+This directory tree holds version 0.9 of JParse, a parser for Java
+source programs.  JParse itself is written in Java, so it will run on
+any platform with a Java Virtual Machine (JVM).  However, it will only
+work with JDK 1.2 or later.  JParse produces an abstract syntax tree
+from a Java source file, and gives the ability to query expressions for
+their types, and expressions, statements, and methods for the checked
+exceptions they throw.
+
+JParse uses ANTLR to create the lexer, parser, and abstract syntax tree
+walkers that is uses.  See http://www.antlr.org/ for more information on
+ANTLR.
+
+The file `INSTALL' in this directory gives information on building and
+installing JParse.
+
+Reports of bugs in JParse should be sent to the JParse maintainer.  The
+maintainer is currently Jerry James <jamesj@acm.org>.  See the file
+`BUGS' in this directory for a list of known bugs in the current
+version.
+
+The JParse home page is http://www.ittc.ku.edu/JParse/.  Updates,
+bugfixes, and further documentation will appear there from time to
+time.

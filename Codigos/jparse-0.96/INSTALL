@@ -1,0 +1,57 @@
+JParse Building and Installation Guide
+Copyright (C) 2000,2004 Jeremiah W. James
+
+   Permission is granted to anyone to make or distribute verbatim copies
+   of this document as received, in any medium, provided that the
+   copyright notice and permission notice are preserved, and that the
+   distributor grants the recipient permission for further
+   redistribution as permitted by this notice.
+
+   Permission is granted to distribute modified versions of this
+   document, or of portions of it, under the above conditions, provided
+   also that they carry prominent notices stating who last changed them.
+
+
+BUILDING:
+
+JParse is distributed in pre-built form, so you only need to build it if
+you want to use your fancy optimizing Java compiler to produce more
+efficient class files, you want to make changes to the source and
+rebuild it afterward, or you want to use a newer version of ANTLR.  If
+you just want to install, skip to the section on INSTALLATION below.
+
+1) Make sure that the ANTLR classes are in your CLASSPATH.  This version
+   of JParse requires at least version 2.7.3 of ANTLR.
+
+2) Unpack the jparse.jar file.  This will create a directory named "jparse"
+   that contains all of the source files.  Issue a `cd jparse' command
+   to change to that directory.
+
+3) Modify the Makefile in the jparse directory as directed by the
+   comments therein.  In particular, specify the Java compiler, Java
+   documentation generator, and Java archive tool to use.  The defaults
+   are "javac", "javadoc", and "jar", respectively.
+
+4) Run the `make' command in the jparse directory.  This will invoke
+   ANTLR to generate the lexer, parser, and tree walkers used by JParse,
+   then invoke the Java compiler to produce class files.  If you want a
+   version of JParse that supports debugging, run the `make debug'
+   command instead.
+
+5) Run the `make jar' command to rebuild the JParse JAR file.
+
+
+INSTALLATION:
+
+To install, simply set your CLASSPATH to include the ANTLR and JParse
+jar files.  For example, if I put antlr.jar and jparse.jar in
+/usr/local/classes, I would modify my CLASSPATH as follows:
+
+(If using csh or tcsh):
+setenv CLASSPATH ${CLASSPATH}:/usr/local/classes/antlr.jar:/usr/local/classes/jparse.jar
+
+(If using sh, ksh, or bash):
+CLASSPATH=$CLASSPATH:/usr/local/classes/antlr.jar:/usr/local/classes/jparse.jar
+export CLASSPATH
+
+And that's all!
